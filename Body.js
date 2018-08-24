@@ -1,6 +1,7 @@
 // import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, FlatList } from 'react-native';
+import Tarea from './Tarea';
 
 // create a components
 class Body extends Component {
@@ -10,7 +11,7 @@ class Body extends Component {
                 <Text>Body</Text>
                 <FlatList
                   data={this.props.tareas}
-                  renderItem={({ item }) => <Text>{item.texto}</Text>}
+                  renderItem={({ item }) => <Tarea item={item} />}
                 />
             </View>
     );

@@ -28,7 +28,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#E2A9F3',
   },
   texto: {
-    paddingHorizontal: 16
+    paddingHorizontal: 16,
+    fontSize: 24,
   }
 });
 
