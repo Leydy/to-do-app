@@ -17,7 +17,7 @@ class Body extends Component {
   }
 }
 
-// define your styles
+
 const styles = StyleSheet.create({
   container: {
     flex: 2,
