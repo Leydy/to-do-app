@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, FlatList } from 'react-native';
 
-// create a component
+// create a components
 class Body extends Component {
   render() {
     return (
