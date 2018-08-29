@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, AsyncStorage, Text } from 'react-native';
+import { StyleSheet, View, AsyncStorage } from 'react-native';
 import Header from './Header';
 import Body from './Body';
 
@@ -10,6 +10,7 @@ export default class App extends React.Component {
     this.state = {
       tareas: [],
       texto: '',
+      cargando: true,
     };
   }
 
@@ -57,6 +58,11 @@ export default class App extends React.Component {
       .then((valor) => {
         console.log(valor);
         console.log(JSON.parse(valor));
+        setTimeout(() => { 
+          this.setState({
+            cargando: false,
+          });
+        }, 5000);
         if (valor !== null) {
           const nuevasTareas = JSON.parse(valor);
           this.setState({
@@ -66,6 +72,9 @@ export default class App extends React.Component {
       })
       .catch((error) => {
         console.log(error);
+        this.setState({
+          cargando: false,
+        });
       });
   }
 
@@ -78,7 +87,7 @@ export default class App extends React.Component {
           cambiarTexto={this.establecerTexto}
           agregar={this.agregarTarea}
         />  
-        <Body tareas={this.state.tareas} eliminar={this.eliminarTarea} />
+        <Body tareas={this.state.tareas} eliminar={this.eliminarTarea} cargando={this.state.cargando} />
       </View>
     );
   }
