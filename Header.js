@@ -1,19 +1,16 @@
 // import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TextInput } from 'react-native';
+import { View, StyleSheet, TextInput } from 'react-native';
 
 class Header extends Component {
   render() {
     return (
       <View style={styles.container}>
-            
             <TextInput
               style={styles.texto}
               onChangeText={this.props.cambiarTexto}
               placeholder="Aquí escribe tu texto..."
               onSubmitEditing={this.props.agregar}
-              value={this.props.texto}
-
             />
           </View>
     );

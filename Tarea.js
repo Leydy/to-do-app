@@ -9,11 +9,11 @@ class Tarea extends Component {
     return (
             <View style={styles.container}>
                 <Text style={styles.texto}>{this.props.item.texto}</Text>
-                <TouchableOpacity onPress={ ()=> {this.props.eliminar(this.props.item.key); }}>
+                <TouchableOpacity onPress={() => { this.props.eliminar(this.props.item.key); }}>
                 <Ionicons
-                    name="md-trash"
-                    size={24}
-                    color="gray"
+                  name="md-trash"
+                  size={24}
+                  color="gray"
                 />
                 </TouchableOpacity>
             </View>

@@ -1,6 +1,6 @@
 // import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
+import { View, StyleSheet, FlatList } from 'react-native';
 import Tarea from './Tarea';
 
 // create a components
