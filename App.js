@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, AsyncStorage, Button } from 'react-native';
+import { StyleSheet, View, AsyncStorage, Text } from 'react-native';
 import Header from './Header';
 import Body from './Body';
 
@@ -78,7 +78,6 @@ export default class App extends React.Component {
           cambiarTexto={this.establecerTexto}
           agregar={this.agregarTarea}
         />  
-        
         <Body tareas={this.state.tareas} eliminar={this.eliminarTarea} />
       </View>
     );
